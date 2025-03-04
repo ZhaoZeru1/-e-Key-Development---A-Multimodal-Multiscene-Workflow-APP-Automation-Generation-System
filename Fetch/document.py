@@ -1,5 +1,4 @@
 from tools import fetch_github_repos
-
 TOKEN = "YOUR_TOKEN"
 
 # Split the search query into smaller parts
@@ -19,4 +18,4 @@ search_queries = [SEARCH_DOCUMENT_PART_1, SEARCH_DOCUMENT_PART_2, SEARCH_DOCUMEN
 # Iterate through each query and fetch results
 for query in search_queries:
     print(f"正在爬取：{query}")
-    fetch_github_repos(TOKEN, query)
+    fetch_github_repos(TOKEN, query,"document.json")
