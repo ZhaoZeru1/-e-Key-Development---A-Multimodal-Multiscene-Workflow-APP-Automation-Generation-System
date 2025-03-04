@@ -1,0 +1,16 @@
+PyGithub==2.1.1
+requests==2.31.0
+your GitHub Token
+
+
+1:GitHub Token expiration or invalidity will cause a 401 Unauthorized error. 
+If you encounter a problem, please regenerate the token.
+
+2:To avoid GitHub API throttling, if there are a large number of requests in a short period of time, 
+you may be banned for a period of time. It is recommended to use VPN to rotate IP addresses.
+
+3:Search queries cannot contain more than 5 OR/AND/NOT keywords; 
+otherwise, the GitHub API will return a 422 Validation Failed.
+
+4:Make sure the location of config.json is correct before running, 
+otherwise the code may not be able to read the configuration correctly.
