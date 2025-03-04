@@ -90,9 +90,9 @@ def handle_exit_signal(signum, frame, all_data, output_file):
     sys.exit(0)
 
 
-def fetch_github_repos(token, search_query, output_file="code.json"):
+def fetch_github_repos(token, search_query, output_file):
     """
-    从 GitHub 搜索并爬取符合查询条件的仓库
+    从 GitHub 搜索并爬取符合查询条件的仓库，并存储到指定 JSON 文件
     """
     g = Github(token)
     all_data = []
@@ -108,7 +108,8 @@ def fetch_github_repos(token, search_query, output_file="code.json"):
     }
     frontend_extensions = (".html", ".css", ".js", ".ts", ".tsx", ".jsx", ".vue", ".json")
     backend_extensions = (
-    ".py", ".java", ".go", ".php", ".cs", ".cpp", ".c", ".rb", ".swift", ".dart", ".sh", "Dockerfile")
+        ".py", ".java", ".go", ".php", ".cs", ".cpp", ".c", ".rb", ".swift", ".dart", ".sh", "Dockerfile"
+    )
 
     signal.signal(signal.SIGINT, lambda s, f: handle_exit_signal(s, f, all_data, output_file))
 
