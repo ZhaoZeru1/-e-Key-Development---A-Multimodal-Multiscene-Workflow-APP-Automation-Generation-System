@@ -1,6 +1,6 @@
 from tools import fetch_github_repos
-
 TOKEN = "YOUR_TOKEN"
+
 
 # Split the search query into smaller parts
 SEARCH_APPROVAL_PART_1 = (
@@ -19,4 +19,4 @@ search_queries = [SEARCH_APPROVAL_PART_1, SEARCH_APPROVAL_PART_2, SEARCH_APPROVA
 # Iterate through each query and fetch results
 for query in search_queries:
     print(f"正在爬取：{query}")
-    fetch_github_repos(TOKEN, query)
+    fetch_github_repos(TOKEN, query,"approval.json")
